@@ -2,7 +2,7 @@
 #define __OLED_H
 
 #include "gpio.h"
-#include "i2c.h"
+#include "i2c.h"	//i2c2
 #include "stdlib.h"
 #include "string.h"
 // I2Cµÿ÷∑

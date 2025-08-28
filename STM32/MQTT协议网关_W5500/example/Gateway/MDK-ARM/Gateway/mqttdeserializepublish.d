@@ -1,0 +1,11 @@
+gateway\mqttdeserializepublish.o: ..\Development\Int\Ethernet\MQTT\MQTTPacket\src\MQTTDeserializePublish.c
+gateway\mqttdeserializepublish.o: ..\Development\Int\Ethernet\MQTT\MQTTPacket\src\StackTrace.h
+gateway\mqttdeserializepublish.o: E:\project_ruanjian\Keil_C51\ARM\ARMCC\Bin\..\include\stdio.h
+gateway\mqttdeserializepublish.o: ..\Development\Int\Ethernet\MQTT\MQTTPacket\src\MQTTPacket.h
+gateway\mqttdeserializepublish.o: ..\Development\Int\Ethernet\MQTT\MQTTPacket\src\MQTTConnect.h
+gateway\mqttdeserializepublish.o: ..\Development\Int\Ethernet\MQTT\MQTTPacket\src\MQTTPublish.h
+gateway\mqttdeserializepublish.o: ..\Development\Int\Ethernet\MQTT\MQTTPacket\src\MQTTSubscribe.h
+gateway\mqttdeserializepublish.o: ..\Development\Int\Ethernet\MQTT\MQTTPacket\src\MQTTUnsubscribe.h
+gateway\mqttdeserializepublish.o: ..\Development\Int\Ethernet\MQTT\MQTTPacket\src\MQTTFormat.h
+gateway\mqttdeserializepublish.o: ..\Development\Int\Ethernet\MQTT\MQTTPacket\src\MQTTPacket.h
+gateway\mqttdeserializepublish.o: E:\project_ruanjian\Keil_C51\ARM\ARMCC\Bin\..\include\string.h

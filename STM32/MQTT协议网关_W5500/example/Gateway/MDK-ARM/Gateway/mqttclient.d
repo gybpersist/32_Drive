@@ -1,0 +1,13 @@
+gateway\mqttclient.o: ..\Development\Int\Ethernet\MQTT\MQTTClient.c
+gateway\mqttclient.o: ..\Development\Int\Ethernet\MQTT\MQTTClient.h
+gateway\mqttclient.o: ..\Development\Int\Ethernet\MQTT\./MQTTPacket/src/MQTTPacket.h
+gateway\mqttclient.o: ..\Development\Int\Ethernet\MQTT\./MQTTPacket/src/MQTTConnect.h
+gateway\mqttclient.o: ..\Development\Int\Ethernet\MQTT\./MQTTPacket/src/MQTTPublish.h
+gateway\mqttclient.o: ..\Development\Int\Ethernet\MQTT\./MQTTPacket/src/MQTTSubscribe.h
+gateway\mqttclient.o: ..\Development\Int\Ethernet\MQTT\./MQTTPacket/src/MQTTUnsubscribe.h
+gateway\mqttclient.o: ..\Development\Int\Ethernet\MQTT\./MQTTPacket/src/MQTTFormat.h
+gateway\mqttclient.o: ..\Development\Int\Ethernet\MQTT\./MQTTPacket/src/StackTrace.h
+gateway\mqttclient.o: E:\project_ruanjian\Keil_C51\ARM\ARMCC\Bin\..\include\stdio.h
+gateway\mqttclient.o: ..\Development\Int\Ethernet\MQTT\./MQTTPacket/src/MQTTPacket.h
+gateway\mqttclient.o: ..\Development\Int\Ethernet\MQTT\mqtt_interface.h
+gateway\mqttclient.o: E:\project_ruanjian\Keil_C51\ARM\ARMCC\Bin\..\include\stdint.h

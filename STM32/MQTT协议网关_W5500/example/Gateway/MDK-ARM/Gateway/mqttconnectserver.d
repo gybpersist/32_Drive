@@ -1,0 +1,11 @@
+gateway\mqttconnectserver.o: ..\Development\Int\Ethernet\MQTT\MQTTPacket\src\MQTTConnectServer.c
+gateway\mqttconnectserver.o: ..\Development\Int\Ethernet\MQTT\MQTTPacket\src\StackTrace.h
+gateway\mqttconnectserver.o: E:\project_ruanjian\Keil_C51\ARM\ARMCC\Bin\..\include\stdio.h
+gateway\mqttconnectserver.o: ..\Development\Int\Ethernet\MQTT\MQTTPacket\src\MQTTPacket.h
+gateway\mqttconnectserver.o: ..\Development\Int\Ethernet\MQTT\MQTTPacket\src\MQTTConnect.h
+gateway\mqttconnectserver.o: ..\Development\Int\Ethernet\MQTT\MQTTPacket\src\MQTTPublish.h
+gateway\mqttconnectserver.o: ..\Development\Int\Ethernet\MQTT\MQTTPacket\src\MQTTSubscribe.h
+gateway\mqttconnectserver.o: ..\Development\Int\Ethernet\MQTT\MQTTPacket\src\MQTTUnsubscribe.h
+gateway\mqttconnectserver.o: ..\Development\Int\Ethernet\MQTT\MQTTPacket\src\MQTTFormat.h
+gateway\mqttconnectserver.o: ..\Development\Int\Ethernet\MQTT\MQTTPacket\src\MQTTPacket.h
+gateway\mqttconnectserver.o: E:\project_ruanjian\Keil_C51\ARM\ARMCC\Bin\..\include\string.h

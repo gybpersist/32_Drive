@@ -1,0 +1,10 @@
+gateway\cjson.o: ..\Development\Com\cJSON.c
+gateway\cjson.o: E:\project_ruanjian\Keil_C51\ARM\ARMCC\Bin\..\include\string.h
+gateway\cjson.o: E:\project_ruanjian\Keil_C51\ARM\ARMCC\Bin\..\include\stdio.h
+gateway\cjson.o: E:\project_ruanjian\Keil_C51\ARM\ARMCC\Bin\..\include\math.h
+gateway\cjson.o: E:\project_ruanjian\Keil_C51\ARM\ARMCC\Bin\..\include\stdlib.h
+gateway\cjson.o: E:\project_ruanjian\Keil_C51\ARM\ARMCC\Bin\..\include\limits.h
+gateway\cjson.o: E:\project_ruanjian\Keil_C51\ARM\ARMCC\Bin\..\include\ctype.h
+gateway\cjson.o: E:\project_ruanjian\Keil_C51\ARM\ARMCC\Bin\..\include\float.h
+gateway\cjson.o: ..\Development\Com\cJSON.h
+gateway\cjson.o: E:\project_ruanjian\Keil_C51\ARM\ARMCC\Bin\..\include\stddef.h

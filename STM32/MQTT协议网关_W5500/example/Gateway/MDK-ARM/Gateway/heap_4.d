@@ -1,0 +1,14 @@
+gateway\heap_4.o: ..\Development\Mid\FreeRTOS\portable\MemMang\heap_4.c
+gateway\heap_4.o: E:\project_ruanjian\Keil_C51\ARM\ARMCC\Bin\..\include\stdlib.h
+gateway\heap_4.o: E:\project_ruanjian\Keil_C51\ARM\ARMCC\Bin\..\include\string.h
+gateway\heap_4.o: ../Development/Mid/FreeRTOS/include/FreeRTOS.h
+gateway\heap_4.o: E:\project_ruanjian\Keil_C51\ARM\ARMCC\Bin\..\include\stddef.h
+gateway\heap_4.o: E:\project_ruanjian\Keil_C51\ARM\ARMCC\Bin\..\include\stdint.h
+gateway\heap_4.o: ../Development/Mid/FreeRTOS/FreeRTOSConfig.h
+gateway\heap_4.o: ../Development/Mid/FreeRTOS/include/projdefs.h
+gateway\heap_4.o: ../Development/Mid/FreeRTOS/include/portable.h
+gateway\heap_4.o: ../Development/Mid/FreeRTOS/include/deprecated_definitions.h
+gateway\heap_4.o: ../Development/Mid/FreeRTOS/portable/RVDS/ARM_CM3/portmacro.h
+gateway\heap_4.o: ../Development/Mid/FreeRTOS/include/mpu_wrappers.h
+gateway\heap_4.o: ../Development/Mid/FreeRTOS/include/task.h
+gateway\heap_4.o: ../Development/Mid/FreeRTOS/include/list.h

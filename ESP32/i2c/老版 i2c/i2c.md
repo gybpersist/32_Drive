@@ -1,3 +1,9 @@
+# 老版 i2c
+
+使用需要 SDK配置 中勾选
+
+![](https://cdn.jsdelivr.net/gh/gybpersist/imges/images%2F2025%2F09%2F07%2F18-38-07-02267d9f90315503eee9fb4c13a5db43-Snipaste_2025-09-07_18-37-35-3ff0db.png)
+
 ### i2c 配置
 
 ```c

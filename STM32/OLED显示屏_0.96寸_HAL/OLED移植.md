@@ -1,4 +1,4 @@
-# 4. OLED移植
+#  OLED移植
 
 # 原理图
 ![1749189492679-9dddd77c-fd7d-4c78-8331-9bdad4179b69.png](./img/DW8UonC6zfdJ0b_w/1749189492679-9dddd77c-fd7d-4c78-8331-9bdad4179b69-006157.png)

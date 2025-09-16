@@ -44,6 +44,10 @@
 
 ![](https://cdn.jsdelivr.net/gh/gybpersist/imges/images%2F2025%2F09%2F07%2F18-08-32-ce1b29637c6a2575c19988b55f6aaaf4-Snipaste_2025-09-07_18-07-34-7d51ca.png)
 
+建议勾选不然后期空间可能不足
+
+![](./img/Snipaste_2025-09-16_19-46-54.png)
+
 添加 partitions.csv 文件到根目录
 
 ```c

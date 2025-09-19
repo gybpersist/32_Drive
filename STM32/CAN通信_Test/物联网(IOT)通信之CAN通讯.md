@@ -1,7 +1,7 @@
 # 物联网(IOT)通信之CAN通讯
 
 #  CAN通讯介绍  
-[CAN通信官网]([https://www.kvaser.cn/about-can/can-protocol-tutorial/](https://www.kvaser.cn/about-can/can-protocol-tutorial/))
+参考：[https://www.kvaser.cn/about-can/can-protocol-tutorial/](https://www.kvaser.cn/about-can/can-protocol-tutorial/)
 
 CAN（Controller Area Network 控制器局域网，简称CAN或者CAN bus）是一种功能丰富的车用总线标准。被设计用于在不需要主机（Host）的情况下，允许网络上的单片机和仪器相互通信。
 
@@ -9,10 +9,7 @@ CAN（Controller Area Network 控制器局域网，简称CAN或者CAN bus）是�
 
 CAN拥有了良好的弹性调整能力，可以在现有网络中增加节点而不用在软、硬件上做出调整。除此之外，消息的传递不基于特殊种类的节点，增加了升级网络的便利性。
 
-![1732704263617-305bf322-157a-4f03-a6b1-4ffd95efd357.jpeg](./img/v7xEkpnqYA2WEYOw/1732704263617-305bf322-157a-4f03-a6b1-4ffd95efd357-682506.jpeg)
-
-## 物理层
-[29.CAN通信物理层介绍.pptx](https://www.yuque.com/attachments/yuque/0/2024/pptx/25671411/1732704332585-951ac71c-19d6-42b0-b564-52592426d4ab.pptx)
+![1732704263617-305bf322-157a-4f03-a6b1-4ffd95efd357.jpeg](./img/v7xEkpnqYA2WEYOw/1732704263617-305bf322-157a-4f03-a6b1-4ffd95efd357-712194.jpeg)
 
 ## 协议层
 ### CAN的帧（报文）种类
@@ -47,9 +44,9 @@ CAN总线上有5种不同的报文类型（或“帧”）：数据帧、远程�
 ### 远程帧介绍
 远程帧与数据帧相比**<font style="color:#FF0000;">没有数据段</font>**。
 
-![1732704268125-6e8f6979-0fe9-4e8e-98b5-971af7600762.png](./img/v7xEkpnqYA2WEYOw/1732704268125-6e8f6979-0fe9-4e8e-98b5-971af7600762-231786.png)
+![1732704268125-6e8f6979-0fe9-4e8e-98b5-971af7600762.png](./img/v7xEkpnqYA2WEYOw/1732704268125-6e8f6979-0fe9-4e8e-98b5-971af7600762-823617.png)
 
-![1732704268389-35a326df-60fa-4359-9963-75da5783501b.png](./img/v7xEkpnqYA2WEYOw/1732704268389-35a326df-60fa-4359-9963-75da5783501b-281316.png)
+![1732704268389-35a326df-60fa-4359-9963-75da5783501b.png](./img/v7xEkpnqYA2WEYOw/1732704268389-35a326df-60fa-4359-9963-75da5783501b-087187.png)
 
 ### CAN总线仲裁
 CAN总线处于空闲状态的时候，最先发送消息的单元获得发送权。
@@ -57,9 +54,6 @@ CAN总线处于空闲状态的时候，最先发送消息的单元获得发送�
 多个单元同时开始发送时，从仲裁段（报文id）的第一位开始进行仲裁。连续输出显性电平最多的单元可以继续发送，即首先出现隐性电平的单元失去对总线的占有权变为接收。（即报文id小的优先级高）。
 
 竞争失败，会自动检测总线空闲，在第一时间再次尝试发送。
-
-### CAN的位时序
-[31.CAN通信协议层位时序介绍.pptx](https://www.yuque.com/attachments/yuque/0/2024/pptx/25671411/1732704446911-cd8dfbbf-92ca-4672-adb0-46ed9b288678.pptx)
 
 # STM32的CAN外设
 ## CAN外设（CAN控制器）介绍
@@ -70,18 +64,18 @@ STM32的芯片中具有bxCAN控制器（Basic Extended CAN），它支持CAN协�
 ## CAN控制器的3种工作模式
 CAN控制器有3种工作模式：初始化模式、正常模式、睡眠模式。
 
-![1732704271030-857cd413-07d6-4c44-b5ac-4138aeed32e5.png](./img/v7xEkpnqYA2WEYOw/1732704271030-857cd413-07d6-4c44-b5ac-4138aeed32e5-331379.png)
+![1732704271030-857cd413-07d6-4c44-b5ac-4138aeed32e5.png](./img/v7xEkpnqYA2WEYOw/1732704271030-857cd413-07d6-4c44-b5ac-4138aeed32e5-129553.png)
 
 上电复位后CAN控制器默认会进入睡眠模式，作用是降低功耗。当需要将进行初始的时候（配置寄存器），会进入初始化模式。当需要通讯的时候，就进入正常模式。
 
 ## CAN控制器的3种测试模式
 CAN控制器有3种测试模式：静默模式、环回模式、环回静默模式。当控制器进入初始化模式的时候才可以配置测试模式。
 
-![1732704271314-8ef071e2-7212-490f-8e5b-f35e8350ea9b.png](./img/v7xEkpnqYA2WEYOw/1732704271314-8ef071e2-7212-490f-8e5b-f35e8350ea9b-483590.png)
+![1732704271314-8ef071e2-7212-490f-8e5b-f35e8350ea9b.png](./img/v7xEkpnqYA2WEYOw/1732704271314-8ef071e2-7212-490f-8e5b-f35e8350ea9b-450995.png)
 
-![1732704271506-e6767261-fe5b-4e75-9832-a5582c749691.png](./img/v7xEkpnqYA2WEYOw/1732704271506-e6767261-fe5b-4e75-9832-a5582c749691-367188.png)
+![1732704271506-e6767261-fe5b-4e75-9832-a5582c749691.png](./img/v7xEkpnqYA2WEYOw/1732704271506-e6767261-fe5b-4e75-9832-a5582c749691-302867.png)
 
-![1732704271723-98c297a6-ffb7-4804-a601-22aead576657.png](./img/v7xEkpnqYA2WEYOw/1732704271723-98c297a6-ffb7-4804-a601-22aead576657-851847.png)
+![1732704271723-98c297a6-ffb7-4804-a601-22aead576657.png](./img/v7xEkpnqYA2WEYOw/1732704271723-98c297a6-ffb7-4804-a601-22aead576657-131682.png)
 
 **静默模式**可以用于检测总线的数据流量。
 
@@ -90,7 +84,7 @@ CAN控制器有3种测试模式：静默模式、环回模式、环回静默模�
 **环回静默模式**也是用于自检，不会影响到总线。
 
 ## 功能框图  
-![1732704271965-e1b673f6-8bf0-4bea-af20-7cc596dcae93.png](./img/v7xEkpnqYA2WEYOw/1732704271965-e1b673f6-8bf0-4bea-af20-7cc596dcae93-705719.png)
+![1732704271965-e1b673f6-8bf0-4bea-af20-7cc596dcae93.png](./img/v7xEkpnqYA2WEYOw/1732704271965-e1b673f6-8bf0-4bea-af20-7cc596dcae93-012742.png)
 
 ### 主动内核
 含各种控制/状态/配置寄存器，可以配置模式、波特率等。在STM32CubeMx中可以非常方便的配置。
@@ -115,7 +109,7 @@ CAN控制器有3种测试模式：静默模式、环回模式、环回静默模�
 
 每个CAN提供了14个位宽可变的、可配置的过滤器组（13~0）。每个过滤器组x由2个32位寄存器，CAN_FxR1和 CAN_FxR2组成。
 
-![1732704272284-2e66123e-e6f1-495c-aa37-75ae88278878.png](./img/v7xEkpnqYA2WEYOw/1732704272284-2e66123e-e6f1-495c-aa37-75ae88278878-936988.png)
+![1732704272284-2e66123e-e6f1-495c-aa37-75ae88278878.png](./img/v7xEkpnqYA2WEYOw/1732704272284-2e66123e-e6f1-495c-aa37-75ae88278878-046633.png)
 
 说明：
 
@@ -127,29 +121,29 @@ STM32 外设定义的位时序与我们前面解释的 CAN 标准时序有**<fon
 
 标准时序：
 
-![1732704272591-08266f0b-5e89-410f-90ee-1243381f9a8b.gif](./img/v7xEkpnqYA2WEYOw/1732704272591-08266f0b-5e89-410f-90ee-1243381f9a8b-751219.gif)
+![1732704272591-08266f0b-5e89-410f-90ee-1243381f9a8b.gif](./img/v7xEkpnqYA2WEYOw/1732704272591-08266f0b-5e89-410f-90ee-1243381f9a8b-622363.gif)
 
 STM32的位时序：把**<font style="color:#FF0000;">传播时间段和相位缓冲段1做了合并</font>**。
 
-![1732704272815-730383ec-f0a9-4e2b-b307-2f2254e9991e.png](./img/v7xEkpnqYA2WEYOw/1732704272815-730383ec-f0a9-4e2b-b307-2f2254e9991e-568171.png)
+![1732704272815-730383ec-f0a9-4e2b-b307-2f2254e9991e.png](./img/v7xEkpnqYA2WEYOw/1732704272815-730383ec-f0a9-4e2b-b307-2f2254e9991e-018620.png)
 
 # CAN通讯案例1：环回静默模式测试
 ## 需求描述
 我们使用环回静默模式测试CAN能否正常工作。把接收到的报文数据发送到串口输出，看是否可以正常工作。
 
-![1732704273001-44684782-d0a4-4cbd-ba61-37cad4ab26d7.png](./img/v7xEkpnqYA2WEYOw/1732704273001-44684782-d0a4-4cbd-ba61-37cad4ab26d7-146762.png) 
+![1732704273001-44684782-d0a4-4cbd-ba61-37cad4ab26d7.png](./img/v7xEkpnqYA2WEYOw/1732704273001-44684782-d0a4-4cbd-ba61-37cad4ab26d7-411581.png) 
 
 
 
 
 
-![1749455565052-b6e040e3-4fd5-41b0-b8ad-337234899eb8.png](./img/v7xEkpnqYA2WEYOw/1749455565052-b6e040e3-4fd5-41b0-b8ad-337234899eb8-553244.png)
+![1749455565052-b6e040e3-4fd5-41b0-b8ad-337234899eb8.png](./img/v7xEkpnqYA2WEYOw/1749455565052-b6e040e3-4fd5-41b0-b8ad-337234899eb8-538042.png)
 
 我们没有用CAN的默认引脚，而是用的重定向的引脚PB8和PB9。
 
 ## 软件设计（HAL库）
 ### STM32CubeMx设置
-![1732704274000-212d3aff-94be-4fe8-b091-c539e52e9578.png](./img/v7xEkpnqYA2WEYOw/1732704274000-212d3aff-94be-4fe8-b091-c539e52e9578-786003.png)
+![1732704274000-212d3aff-94be-4fe8-b091-c539e52e9578.png](./img/v7xEkpnqYA2WEYOw/1732704274000-212d3aff-94be-4fe8-b091-c539e52e9578-111042.png)
 
 1. **<font style="color:rgb(44, 44, 54);">Time Triggered Communication (时间触发通信)</font>**<font style="color:rgb(44, 44, 54);">: 设置为"Disable"表示不启用时间触发通信模式。在时间触发通信模式下，消息的发送和接收是基于预定义的时间表，而不是事件驱动的。这种模式通常用于需要高度确定性和实时性的应用。</font>
 2. **<font style="color:rgb(44, 44, 54);">Automatic Bus-Off Management (自动总线关闭管理)</font>**<font style="color:rgb(44, 44, 54);">: 设置为"Enable"意味着当CAN控制器进入总线关闭状态时，它将自动尝试重新连接到网络，而不需要外部干预。这有助于提高系统的可靠性和可用性。</font>
@@ -158,11 +152,11 @@ STM32的位时序：把**<font style="color:#FF0000;">传播时间段和相位�
 5. **<font style="color:rgb(44, 44, 54);">Receive Fifo Locked Mode (接收FIFO锁定模式)</font>**<font style="color:rgb(44, 44, 54);">: 设置为"Disable"意味着接收FIFO（先进先出队列）可以被自由访问和修改，直到所有数据都被读取。如果启用，一旦FIFO开始填充，它将保持锁定状态，直到所有数据都被读取，这可以防止数据丢失但可能会限制灵活性。</font>
 6. **<font style="color:rgb(44, 44, 54);">Transmit Fifo Priority (发送FIFO优先级)</font>**<font style="color:rgb(44, 44, 54);">: 设置为"Disable"表示发送FIFO中的消息按照它们被放置的顺序进行发送，没有优先级排序。如果启用，可以根据某些标准对消息进行优先级排序，以确保更重要的消息优先发送。</font>
 
-![1732704274292-2130d924-5d68-4be0-a121-5ee92fe9940b.png](./img/v7xEkpnqYA2WEYOw/1732704274292-2130d924-5d68-4be0-a121-5ee92fe9940b-656424.png)
+![1732704274292-2130d924-5d68-4be0-a121-5ee92fe9940b.png](./img/v7xEkpnqYA2WEYOw/1732704274292-2130d924-5d68-4be0-a121-5ee92fe9940b-562208.png)
 
-![1732704274488-3c6a5561-946b-40f4-bcdf-8b274a3846b9.png](./img/v7xEkpnqYA2WEYOw/1732704274488-3c6a5561-946b-40f4-bcdf-8b274a3846b9-963292.png)
+![1732704274488-3c6a5561-946b-40f4-bcdf-8b274a3846b9.png](./img/v7xEkpnqYA2WEYOw/1732704274488-3c6a5561-946b-40f4-bcdf-8b274a3846b9-074876.png)
 
-![1732704274719-77884278-8a64-48eb-8407-db689f8d015d.png](./img/v7xEkpnqYA2WEYOw/1732704274719-77884278-8a64-48eb-8407-db689f8d015d-672398.png)
+![1732704274719-77884278-8a64-48eb-8407-db689f8d015d.png](./img/v7xEkpnqYA2WEYOw/1732704274719-77884278-8a64-48eb-8407-db689f8d015d-886889.png)
 
 ### can.h
 在can.h中添加如下代码。
@@ -286,6 +280,8 @@ CAN_Filter_Config();
 // 2. 启动CAN,进入工作模式(他的初始化模式没有进入工作模式)
 HAL_CAN_Start(&hcan);
 
+printf(" CAN 通信实验,环回静默模式 寄存器版本\n");
+
 printf("CAN 初始化配置完成 \n");
 
 // 发送数据
@@ -320,11 +316,16 @@ printf("报文%d - stdID:%d - len:%d - data:%s\n", i + 1, rxDataMsg[i].stdID, rx
 ## 需求描述
 使用2块开发板实现CAN消息的发送和接收，一个发送数据，另外一个接收数据。
 
+## 硬件设计
+需要把2块开发的CAN_High连起来，CAN_Low连起来。连接如图所示。
+
+![1732704275674-d95215cf-e837-44d6-b789-2dab4a796009.png](./img/v7xEkpnqYA2WEYOw/1732704275674-d95215cf-e837-44d6-b789-2dab4a796009-008981.png)
+
 ## 软件设计（HAL库）
 ### CubeMx设置
 拷贝CAN通信实验1的HAL库版本工程2次。一个用于发送，一个用于接收。重新打开每个工程，把Test Mode改成 Normal即可，其他不用改变。然后重新生成代码。
 
-![1732704276047-daf763c0-c0a0-4aaf-9477-c8c7f1c50a1f.png](./img/v7xEkpnqYA2WEYOw/1732704276047-daf763c0-c0a0-4aaf-9477-c8c7f1c50a1f-790728.png)
+![1732704276047-daf763c0-c0a0-4aaf-9477-c8c7f1c50a1f.png](./img/v7xEkpnqYA2WEYOw/1732704276047-daf763c0-c0a0-4aaf-9477-c8c7f1c50a1f-006967.png)
 
 ### main.c 发送
 ```c
@@ -340,6 +341,7 @@ int main(void)
     CAN_Filter_Config();
     /* 2. 启动CAN总线 */
     HAL_CAN_Start(&hcan);
+    printf(" CAN 发送实验...\r\n");
 
     while (1)
     {
@@ -366,7 +368,7 @@ int main(void)
     CAN_Filter_Config();
     /* 2. 启动CAN总线 */
     HAL_CAN_Start(&hcan);
-
+    printf(" CAN 接收 实验...\r\n");
     /* 4. 接收数据 */
     RxDataStruct rxDataStruct[8];
     uint8_t rxMsgCount;
